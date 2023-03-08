@@ -1,0 +1,36 @@
+// /todos/ API 1
+
+GET http://localhost:3000/todos/?search_q=buy
+###
+// /todos/:todoId/ API 2
+GET http://localhost:3000/todos/1/
+
+###
+// /agenda/ API 3
+GET http://localhost:3000/agenda/?date=2021-12-12
+
+###
+// /todos/ API 4
+POST http://localhost:3000/todos/
+Content-Type: application/json
+
+{
+ "id": 6,
+ "todo": "Finalize event theme",
+ "priority": "LOW",
+ "status": "TO DO",
+ "category": "HOME",
+ "dueDate": "2021-02-22"
+}
+
+###
+// /todos/:todoId/ API 5
+PUT http://localhost:3000/todos/1/
+Content-Type: application/json
+
+{ "dueDate": "2021-01-12" }
+
+
+###
+// /todos/:todoId/ API 6
+DELETE http://localhost:3000/todos/2 
